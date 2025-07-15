@@ -47,6 +47,18 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/userdata mmcblk0p51 ' \
             "$@"
         ;;
+            
+    "platina")
+        sed -i \
+            -e 's block/by-name/system mmcblk0p77 ' \
+            -e 's block/by-name/vendor mmcblk0p78 ' \
+            -e 's block/bootdevice/by-name/userdata mmcblk0p79 ' \
+            -e 's block/bootdevice/by-name/modem mmcblk0p74 ' \
+            -e 's block/bootdevice/by-name/bluetooth mmcblk0p34 ' \
+            -e 's block/bootdevice/by-name/dsp mmcblk0p63 ' \
+            -e 's block/bootdevice/by-name/cache mmcblk0p75 ' \
+            "$@"
+        ;;
 
     "serranodsdd")
         sed -i \
